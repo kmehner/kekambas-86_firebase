@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from './views/Home';
 import Register from './views/Register';
 import Login from './views/Login';
+import fire from './config/Fire';
 
 
 export default class App extends Component {
@@ -40,6 +41,7 @@ export default class App extends Component {
     }
 
     render() {
+        console.log(fire);
         return (
         <div>
             <Navbar logout={this.logout} user={this.state.user}/>
