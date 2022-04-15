@@ -5,7 +5,7 @@ import Home from './views/Home';
 import Register from './views/Register';
 import Login from './views/Login';
 import fire from './config/Fire';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 
 
 export default class App extends Component {
@@ -14,6 +14,21 @@ export default class App extends Component {
         this.state = {
         user: null
         }
+    }
+
+    componentDidMount(){
+        this.authListener();
+    }
+
+    authListener = () => {
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if (user){
+                this.setState({user})
+            } else {
+                this.setState({user:null})
+            }
+        })
     }
 
     register = (e) => {
