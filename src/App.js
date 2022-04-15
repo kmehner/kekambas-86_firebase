@@ -5,7 +5,7 @@ import Home from './views/Home';
 import Register from './views/Register';
 import Login from './views/Login';
 import fire from './config/Fire';
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from 'firebase/auth';
 
 
 export default class App extends Component {
@@ -64,6 +64,12 @@ export default class App extends Component {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log(userCredential)
+            })
+            .catch(err => console.error(err))
     }
 
     render() {
