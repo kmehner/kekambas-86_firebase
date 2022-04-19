@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+If you are working with a forked clone, you need to install packages based on the requirements.
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -13,6 +17,34 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### `install firebase`
+
+npm install firebase 
+
+### `firebase website`
+create app (unique but can be named the same as the project) 
+
+click <> to create web app
+name the app 
+add the firebase SDK - use NPM and they will give you the code 
+
+In the code:
+- Create config file inside of the src file 
+
+in the config.py:
+- import { initializeApp } from 'firebase/app';
+- paste the use NPM code here
+- const fire = initializeApp(firebaseConfig);
+- export default fire
+
+app.js
+- import fire from './config/Fire'
+
+
+
+
+- - - - - - 
 
 ### `npm test`
 
