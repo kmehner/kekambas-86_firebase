@@ -29,6 +29,13 @@ click <> to create web app
 name the app 
 add the firebase SDK - use NPM and they will give you the code 
 
+In the code:
+- Create config file inside of the src file 
+
+in the config.py:
+- import { initializeApp } from 'firebase/app';
+- paste the use NPM code here
+
 
 
 
