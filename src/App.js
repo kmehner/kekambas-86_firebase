@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from './views/Home';
 import Register from './views/Register';
 import Login from './views/Login';
-import fire from './config/Fire';
+import fire from './config/Fire'
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from 'firebase/auth';
 
 
