@@ -42,6 +42,7 @@ export default class App extends Component {
         return
         }
         console.log(email, password, confirmPass)
+        // Authenticate user using firebase getAuth()
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential)=>{
