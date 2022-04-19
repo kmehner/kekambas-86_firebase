@@ -35,6 +35,11 @@ In the code:
 in the config.py:
 - import { initializeApp } from 'firebase/app';
 - paste the use NPM code here
+- const fire = initializeApp(firebaseConfig);
+- export default fire
+
+app.js
+- import fire from './config/Fire'
 
 
 
