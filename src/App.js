@@ -62,6 +62,7 @@ export default class App extends Component {
         signOut(auth).then(() => {}).catch(err => console.error(err))
     }
 
+    // Login using SignInWithEmailAndPassword
     login = (e) =>{
         e.preventDefault();
         console.log(e);
