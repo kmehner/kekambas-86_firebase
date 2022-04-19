@@ -55,6 +55,7 @@ export default class App extends Component {
             })
     }
 
+    // Logout user using signOut
     logout = () =>{
         console.log('You have logged out!')
         const auth = getAuth();
