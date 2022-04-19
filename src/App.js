@@ -16,10 +16,12 @@ export default class App extends Component {
         }
     }
 
+    // When the component mounts, call the authListener
     componentDidMount(){
         this.authListener();
     }
 
+    // Auth listener - make sure onAuthStateChanged is imported 
     authListener = () => {
         const auth = getAuth();
         onAuthStateChanged(auth, (user) => {
